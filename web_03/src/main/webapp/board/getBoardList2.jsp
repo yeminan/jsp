@@ -28,7 +28,7 @@
 		<%-- <h3>${name }님 &nbsp; &nbsp; <a href="../LogoutCtrl">로그아웃</a></h3> --%>
 	</div>
 	<h2>글 목록</h2>
-	<form method="post" action="../GetBoardSearchCtrl">
+	<form method="post" action="${path1 }/GetBoardSearchCtrl">
 		<table class="table" id="search_tb">
 			<tr>
 				<td>
@@ -54,7 +54,7 @@
 		<tbody>
 		<c:forEach items="${list }" var="vo" varStatus="status">
 			<tr>
-				<td>${status.count }</td>
+				<td></td>
 				<td><a href="../GetBoardCtrl?num=${vo.seq }">${vo.title }</a></td>
 				<td>${vo.id }</td>
 				<td>${vo.regdate }</td>
